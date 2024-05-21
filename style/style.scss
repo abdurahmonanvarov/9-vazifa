@@ -1,0 +1,31 @@
+@import '_fonts.scss';
+@import '_normalize.scss';
+@import '_header.scss';
+@import '_main.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    font-size: 16px;
+}
+
+%buttons {
+    background-color: #7F56D9;
+    color: #FFFFFF;
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.continer {
+    max-width: 1058px;
+    width: 100%;
+    margin: 0 auto;
+}
+
