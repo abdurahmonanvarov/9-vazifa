@@ -1,7 +1,8 @@
-@import '_fonts.scss';
-@import '_normalize.scss';
-@import '_header.scss';
-@import '_main.scss';
+@import 'fonts.scss';
+@import 'normalize.scss';
+@import 'header.scss';
+@import 'main.scss';
+@import 'info.scss';
 
 * {
     margin: 0;
@@ -11,6 +12,7 @@
 }
 
 body {
+    background-color: #F9FAFB;
     font-size: 16px;
 }
 
@@ -21,11 +23,73 @@ body {
     border-radius: 20px;
     border: none;
     cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+        background-color: #452c7d;
+    }
+}
+#chek{
+    display: none;
+}
+label{
+    display: none;
 }
 
 .continer {
     max-width: 1058px;
     width: 100%;
     margin: 0 auto;
+}
+.image2{
+    display: none;
+}
+.image3{
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .continer{
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .continer{
+        max-width: 720px;
+    }
+    .image1, .image3{
+        display: none;
+    }
+    .image2{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .continer{
+        max-width: 540px;
+    }
+    .image2, .image1{
+        display: none;
+    }
+    .image3{
+        display: block;
+    }
+    label{
+        display: block;
+    }
+    
+}
+@media screen and (max-width: 540px) {
+    .continer{
+        max-width: 300px;
+
+    }
+    .image2, .image1{
+        display: none;
+    }
+    .image3{
+        display: block;
+    }
 }
 

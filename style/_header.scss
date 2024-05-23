@@ -1,51 +1,68 @@
-.header {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #1B152B;
-    border-radius: 47px;
-    margin-bottom: 64px;
-
-    .continer__header {
+.header{
+    padding-top: 15px;
+    padding-bottom: 64px;
+    .continer__header{
+        
+        padding: 12px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 235.88px;
-
-        a img {
-            width: 172.55px;
+        background-color: #1B152B;
+        border-radius: 47px;
+        color: #fff;
+        img a{
+            width: 172.25px;
         }
-
-        .header__links ul {
+        .header__links ul{
+            list-style: none;
             display: flex;
             align-items: center;
             gap: 16px;
-            list-style: none;
+        }
+        ul a{
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Inter';
+            font-size: 16px;
+            transition: all 0.5s;
+            &:hover{
+                color: #1B152B;
+            }
+        }
+        button{
+            @extend %buttons;
         }
     }
 }
 
-.continer__header {
-    .header__links {
-        a {
-            text-decoration: none;
-            color: #FFFFFF;
-            transition: all 0.5s;
+@media screen and (max-width: 768px) {
+  .continer{
+    max-width: 540px;
+  }  
+  .continer__header{
+    position: relative;
+    .header__links{
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0px;
+        ul{
+            flex-direction: column;
+            background-color: #1B152B;
+            width: 100%;
+           text-align: center;
+           padding: 20px;
+           border-bottom-left-radius: 47px;
+           border-bottom-right-radius: 47px;
         }
-
-        a:hover {
-            color: #7F56D9;
-        }
     }
-
-    button {
-        @extend %buttons;
-        transition: 0.5s;
-        
+    button{
+        display: none;
     }
-    button:hover {
-        background-color: #4c2a96;
-    }
+    #chek:checked ~ .header__links{
+        display: block;
+  }
+  
+}
 }
